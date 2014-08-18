@@ -1,0 +1,10 @@
+USER:            raymond
+BUILD:           6.1
+DESCRIPTION:     Stellar/Planetary Parameters Additions and Updates
+FILETYPE:        edm
+FILENAME:        HD_37124_b.edm
+DATE:            2014-08-13 18:22:14
+#                                    
+# Addition of planet parameter values
+#                                    
+EDMT|planet|51000391|add|plnorbper null|plnorbpererr1 null|plnorbpererr2 null|plnorbperlim null|plnorbsmax 0.519|plnorbsmaxerr1 null|plnorbsmaxerr2 null|plnorbsmaxlim null|plnorbincl null|plnorbinclerr1 null|plnorbinclerr2 null|plnorbincllim null|plnorbtper null|plnorbtpererr1 null|plnorbtpererr2 null|plnorbtperlim null|plnorbeccen 0.079|plnorbeccenerr1 null|plnorbeccenerr2 null|plnorbeccenlim null|plnorblper 138.09|plnorblpererr1 null|plnorblpererr2 null|plnorblperlim null|plnorbdate null|plnorbmethod null|plnrvamp null|plnrvamperr1 null|plnrvamperr2 null|plnrvamplim null|plnmsinij 0.624|plnmsinijerr1 null|plnmsinijerr2 null|plnmsinie 198.318|plnmsinieerr1 null|plnmsinieerr2 null|plnmsinilim null|plnmassj null|plnmassjerr1 null|plnmassjerr2 null|plnmasse null|plnmasseerr1 null|plnmasseerr2 null|plnmasslim null|plnradj null|plnradjerr1 null|plnradjerr2 null|plnrade null|plnradeerr1 null|plnradeerr2 null|plnrads null|plnradserr1 null|plnradserr2 null|plnradlim null|plndens null|plndenserr1 null|plndenserr2 null|plndenslim null|plneqt null|plneqterr1 null|plneqterr2 null|plneqtlim null|plntrandep null|plntrandeperr1 null|plntrandeperr2 null|plntrandeplim null|plntrandurd null|plntrandurderr1 null|plntrandurderr2 null|plntrandurh null|plntrandurherr1 null|plntrandurherr2 null|plntrandurlim null|plntranmid null|plntranmiderr1 null|plntranmiderr2 null|plntranmidlim null|plnimppar null|plnimpparerr1 null|plnimpparerr2 null|plnimpparlim null|plnoccdep null|plnoccdeperr1 null|plnoccdeperr2 null|plnoccdeplim null|plnratdor null|plnratdorerr1 null|plnratdorerr2 null|plnratdorlim null|plnratror null|plnratrorerr1 null|plnratrorerr2 null|plnratrorlim null|plnblend 0|plnrefid -9|
