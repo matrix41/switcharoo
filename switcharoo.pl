@@ -8,11 +8,11 @@ use feature qw(switch say); # need this for GIVEN-WHEN block
 my $superstring;
 my $parameter;
 my $value;
-my $temp;
-my $temp2;
 
 # Get filename from command line argument 
 my $inputfile = $ARGV[0];
+my $targetfield = $ARGV[1];
+my $newvalue = $ARGV[2];
 
 # Declare new filehandle and associate it with filename 
 open (my $fh, '<', $inputfile) or die "\nCould not open file '$inputfile' $!\n";
@@ -32,23 +32,17 @@ foreach my $element (@array)
 	my @split_parameters = split(/\|/, $element);
 	if ( $split_parameters[0] =~ /^EDMT$/ )
 	{
-    # first iteration 
+    # this FOR-loop will upack and iterate through all the parameter names 
 		for ( my $i = 0 ; $i < $#split_parameters ; $i++ )
 		{
       ( $parameter, $value ) = split(/\s+/, $split_parameters[$i]);
 
-      if ( $parameter =~ /^age$/ )
+      if ( $parameter =~ /^$targetfield$/ )
       {
-      	$temp = $value;
-      	$value = "null";
+      	$value = "$newvalue";
       }
 
-      if ( $parameter =~ /^agelim$/ )
-      {
-      	$temp2 = $value;
-      	$value = "null";
-      }
-
+# I need this IF-block below to handle cases for EDMT tag and OBJECTID field
       if ( defined($value) )
       {
         $split_parameters[$i] = "$parameter" . " " . "$value";
@@ -57,32 +51,7 @@ foreach my $element (@array)
       {
         $split_parameters[$i] = "$parameter";
       }
-		} # end of first iteration 
-
-    # second iteration 
-		for ( my $i = 0 ; $i < $#split_parameters ; $i++ )
-		{
-      ( $parameter, $value ) = split(/\s+/, $split_parameters[$i]);
-
-      if ( $parameter =~ /^mass$/ )
-      {
-      	$value = $temp;
-      }
-
-      if ( $parameter =~ /^masslim$/ )
-      {
-      	$value = $temp2;
-      }
-
-      if ( defined($value) )
-      {
-        $split_parameters[$i] = "$parameter" . " " . "$value";
-      }
-      else
-      {
-        $split_parameters[$i] = "$parameter";
-      }
-		} # end of second iteration 
+		} # end of FOR-loop iteration
 
     # now pack the parameters back up again
     for ( my $k = 0 ; $k < $#split_parameters ; $k++ )
