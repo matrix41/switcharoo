@@ -9,6 +9,15 @@ my $superstring;
 my $parameter;
 my $value;
 
+# Check if there are sufficient number of arguments
+if ( @ARGV != 3 )
+{
+  print "Number of arguments you entered: " . scalar @ARGV . "\n";
+  print "Syntax: ./switcharoo.pl FILENAME COLUMN_NAME NEW_VALUE\n\n";
+  print "Example: ./switcharoo.pl HD_37124_b.edm plnmsinilim 0\n\n";
+  exit;
+}
+
 # Get filename from command line argument 
 my $inputfile = $ARGV[0];
 my $targetfield = $ARGV[1];
